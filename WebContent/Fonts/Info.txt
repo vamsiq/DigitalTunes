@@ -1,0 +1,7 @@
+Please first install all the fonts in your system before you take the printouts.
+
+
+Install in the following address:
+
+c:\windows\fonts
+

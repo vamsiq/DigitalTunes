@@ -1,0 +1,161 @@
+<html>
+<head><title>REGISTRATION</title>
+<style>
+.LFont {
+	FONT-WEIGHT: bold; FONT-SIZE:8pt; COLOR:  black; FONT-FAMILY: "verdana"
+}
+.BFont {
+	FONT-WEIGHT: bold; FONT-SIZE:12pt; COLOR:  black; FONT-FAMILY: "verdana"
+}
+
+.toppanel1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 18px; COLOR:black; FONT-FAMILY: verdana,sans-serif; 
+}
+.formText {
+	BORDER-RIGHT: #aaaaaa 1px solid; BORDER-TOP: #aaaaaa 1px solid; FONT-SIZE: 11px; BORDER-LEFT: #aaaaaa 1px solid; COLOR: black; BORDER-BOTTOM: #aaaaaa 1px solid; FONT-FAMILY: verdana
+}
+.style2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+	color: #660000;
+}
+.style3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: #CC0000;
+	font-weight: bold;
+}
+.style4 {color: #CC0000}
+.da{
+margin-left:150px;
+margin-top:100px;
+}
+tr{
+cell-padding:5px;
+cell-spacing:5px;
+}
+td{
+padding:5px;
+margin:10px;
+
+}
+</style>
+<script language="javascript">
+function validateuname()
+{
+
+n=document.f1.elements.length
+
+ for(i=0;i<n;i++)
+{
+  v=document.f1.elements[i].value
+  s=document.f1.elements[i].name
+  if(v==null||v=="")
+  alert(s+"  should not empty")
+}
+}
+function validatepno()
+{
+  s=document.f1.phno.value
+  if(s.length>10)
+  alert("phone number length should be lessthan 8 numbers")
+}
+</script>
+</head>
+<body background="d4.jpg">
+<div class="da">
+<form name="f1" action="suppujsp3.jsp">
+
+
+  <TABLE width="85%" align="center">
+<TR  ><TD align="center" colspan="3"><span class="style3"><u>RegistrationForm</u></span></TD>
+</TR>
+<TR class=LFont>
+  <TD width="253">&nbsp;</TD>
+  <TD width="62">&nbsp;</TD>
+  <TD width="293">&nbsp;</TD>
+</TR>
+<TR class=LFont>
+  <TD align="right">FIRST NAME</TD>
+  <TD>&nbsp;</TD>
+  <TD width="293"><input type="text" class=formText name="fname" required></TD>
+</TR>
+<TR class=LFont><TD align="right">
+LAST NAME</TD>
+  <TD>&nbsp;</TD>
+  <TD width="293"><input type="text"  class=formText name="lname" required></TD></TR>
+<TR class=LFont><TD align="right">
+USERNAME</TD>
+  <TD>&nbsp;</TD>
+  <TD width="293"><input type="text"  class=formText name="uname" required></TD></TR>
+<TR class=LFont><TD align="right">
+PASSWORD</TD>
+  <TD>&nbsp;</TD>
+  <TD width="293"><input type="password"  class=formText name="pword" required></TD></TR>
+<TR class=LFont><TD align="right">
+HOUSE NO</TD>
+  <TD>&nbsp;</TD>
+  <TD width="293"><input type="text"  class=formText name="hno" required></TD></TR>
+<TR class=LFont><TD align="right">
+STREET</TD>
+  <TD>&nbsp;</TD>
+  <TD width="293"><input type="text"  class=formText name="str" required></TD></TR>
+<TR class=LFont><TD align="right">
+CITY
+</TD>
+  <TD>&nbsp;</TD>
+  <TD width="293"><input type="text"  class=formText  name="city" required></TR>
+<TR class=LFont><TD align="right">
+STATE</TD>
+  <TD>&nbsp;</TD>
+  <TD width="293"><input type="text" class=formText   name="state" required></TR>
+<TR class=LFont><TD align="right">
+COUNTRY</TD>
+  <TD>&nbsp;</TD>
+  <TD width="293"><input type="text" class=formText   name="ctr" required></TR>
+<TR class=LFont><TD align="right">
+PIN</TD>
+  <TD>&nbsp;</TD>
+  <TD width="293"><input type="text"  class=formText name="pin" required></TD></TR>
+<TR class=LFont><TD align="right">
+PHONE</TD>
+  <TD>&nbsp;</TD>
+  <TD width="293"><input type="text"  class=formText name="phno"  onblur="validatepno()" required></TD></TR>
+<TR class=LFont><TD align="right">
+EMAIL-ID</TD>
+  <TD>&nbsp;</TD>
+  <TD width="293"><input type="text"  class=formText name="eid" size="20"></TD></TR>
+<TR class=LFont>
+  <TD  height="33" colspan="3" align="center">
+  <span class="style4">Forgot Password Information</span></TD>
+ 
+</TR>
+<TR class=LFont><TD align="right">
+Question </TD>
+  <TD>&nbsp;</TD>
+  <TD width="293"><select name="que" class=formText>
+		<option selected value="A">&lt;- Select a Question -&gt;</option>
+        <option value="P">What is your pet name?</option>
+        <option value="B">What is your place of birth?</option>
+        <option value="M">What is your mother's name?</option>
+        <option value="F">What is your father's name?</option>
+		</select>		</TD></TR>
+		<TR class=LFont><TD align="right">
+ANSWER</TD>
+		  <TD>&nbsp;</TD>
+	    <TD width="293"><input type="text"  class=formText name="ans" size="20"></TD></TR>
+<TR><TD>&nbsp;&nbsp;&nbsp;&nbsp; </TD>
+  <TD>&nbsp;</TD>
+  <TD width="293"><input  class=formText type="submit" value="submit">&nbsp;&nbsp;&nbsp;
+    <input  class=formText type=reset value=Reset>&nbsp;&nbsp;
+    <a href=login.html class="style2">login</a></TD>
+</TR>
+</TABLE>
+
+</form>
+<center><a href=login.html></a>
+</center>
+</div>
+</body>
+</html>

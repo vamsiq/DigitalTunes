@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+</HEAD>
+<body background=ban.GIF>
+<style>
+.LFont {
+	FONT-WEIGHT: bold; FONT-SIZE:8pt; COLOR:  black; FONT-FAMILY: "verdana"
+}
+.BFont {
+	FONT-WEIGHT: bold; FONT-SIZE:12pt; COLOR:  black; FONT-FAMILY: "verdana"
+}
+
+.toppanel1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 18px; COLOR:black; FONT-FAMILY: verdana,sans-serif; 
+}
+.formText {
+	BORDER-RIGHT: #aaaaaa 1px solid; BORDER-TOP: #aaaaaa 1px solid; FONT-SIZE: 11px; BORDER-LEFT: #aaaaaa 1px solid; COLOR: black; BORDER-BOTTOM: #aaaaaa 1px solid; FONT-FAMILY: verdana
+}
+</style>
+<script language="javascript">
+function validate()
+		{
+			var v1 = document.data.memid.value;
+			var v2 = document.data.forgotPassAns.value;
+			if(v1.length<1)
+			{
+				alert("Member Id must not be blank");
+				data.memid.focus();
+				return false;
+			}
+			if(v2.length<1)
+			{
+				alert("Answer must not be blank");
+				data.forgotPassAns.focus();
+				return false;
+			}
+			return true;
+		}
+</script>
+<BODY bgcolor="#E0DDC2">
+<form name="data" method="POST" action="./forgotPass.jsp" onSubmit="return validate()">
+<br><br>
+<center><h2 class=bfont><u>Forgot Password Form</u></p>
+<br>
+<center>
+<TABLE width="257">
+<TR class=LFont><TD>
+	UserId </TD><TD width="130">
+	<input type="text" class=formText name="memid" ></TD></TR>
+	<tr></tr>
+
+<TR class=LFont><TD width="87">
+Hint Question </TD><TD width="130"><select size="1"  class=formText name="forgotPassType">
+        <option selected value="A">&lt;- Select a Question -&gt;</option>
+        <option value="P">What is your pet name?</option>
+        <option value="B">What is your place of birth?</option>
+        <option value="M">What is your mother's name?</option>
+        <option value="F">What is your father's name?</option>
+      </select></TD></TR>
+<TR class=LFont><TD width="87">
+Answer</TD><TD width="130"><input type="text"  class=formText name="forgotPassAns" size="28"></TD></TR>
+<TR class=LFont><TD width="87">
+<TR><TD width="87">&nbsp;&nbsp;&nbsp;&nbsp; </TD><TD width="130"><input  class=formText type="submit" value="submit">&nbsp;&nbsp;&nbsp;
+    <input  class=formText type=reset value=Reset></TD></TR>
+
+</table>
+</center>
+</BODY>
+</HTML>
+

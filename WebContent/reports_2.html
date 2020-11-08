@@ -1,0 +1,68 @@
+<style type="text/css">
+<!--
+.style1 {
+	font-size: 24px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #336600;
+}
+.style2 {
+	color: #CC0000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+-->
+</style>
+<body background="ban.GIF">
+<script>
+document.oncontextmenu=new Function("return false");
+document.onselectstart=new Function("return false");
+var persistmenu="yes" 
+var persisttype="sitewide"
+if (document.getElementById){ 
+document.write('<style type="text/css">\n')
+document.write('.submenu{display: none;}\n')
+document.write('</style>\n')
+}
+function getLoad() {
+var anc=document.getElementsByTagName("A");
+ for(an=0;an<anc.length;an++) {
+ anc[an].onmouseover=function() {status=this.innerHTML;return true;}
+ anc[an].onmouseout=function() {status="Done";return true;}
+ anc[an].onfocus=function() {status=this.innerHTML;this.blur();return true;}
+ anc[an].oncontextmenu=function() {
+                             var cfm=confirm("Would u like to open this link in New Window");
+                             if(cfm) open(this.href);
+                             else return;
+                                  }
+}
+}
+function SwitchMenu(obj){
+	if(document.getElementById){
+	var el = document.getElementById(obj);
+	var ar = document.getElementById("masterdiv").getElementsByTagName("span"); 		if(el.style.display != "block"){ 
+			for (var i=0; i<ar.length; i++){
+				if (ar[i].className=="submenu") 
+				ar[i].style.display = "none";
+			}
+			el.style.display = "block";
+		}else{
+			el.style.display = "none";
+		}
+	}
+}
+function getReports(url) {
+var mw=screen.availWidth-50;
+var mh=screen.availHeight-50;
+open(url,"reportss","scrollbars,width="+mw+",height="+mh+",left=20,top=20,maximize=yes");
+}
+
+</script>
+	<center>
+		<br><h1 class="style1">Administration Reports</h1>
+		<br>
+		 <h4><a href="javascript:getReports('report?table=registration')">Reports onTotal Registered Customers</a><br><br>
+		<a href="javascript:getReports('report?table=forder')">Reports onTotal Placed Orders</a><br><br>
+		<a href="javascript:getReports('report?table=search')">Reports on Availability of CDs</a><br><br>
+		<a href="administration.html" class="style2">Home</a></h4>
+	</center><br><br>
+	<script>getLoad()</script>

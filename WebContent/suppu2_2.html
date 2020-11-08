@@ -1,0 +1,49 @@
+<html>
+<head><title>chutky</title>
+
+<script language="javascript">
+
+function validateusfname()
+{
+ 	
+	n=document.f1.elements.length
+	for(i=0;i<n;i++)
+	{  
+		v=document.f1.elements[i].value
+		s=document.f1.elements[i].name
+		if(v==null || v=="")
+	  	alert(s+"   should not empty")
+	}
+}
+</script>
+
+</head>
+ 
+<body background="gp.jpg"
+      bgcolor="yellow"
+       text="blue">
+<h1><center>Registration</h1>
+<form name="f1"  action="suppu2">
+firstname    :<input type="text" name="fname">
+<a href=c:\sri\suppu1.html>login</a><br>
+lastname     :<input type="text" name="lname"><br>
+middlename   :<input type="text" name="mname"><br>
+address      :<input type="textarea" rows=6 coloms=6 name="textarea"><br>
+phno         :<input type=""text" name="phone"><br>
+e-mailid     :<input type="text" name="email"><br>
+region
+<select name="select">
+india        :<option>india</option>
+usa          :<option>usa</option>
+ RSA         :<option>rsa</option>
+ AUS         :<option>aus</option>
+</select><br>
+<input type="button" name="b1" value="OK">
+<input type=submit onclick="validateusfname()" >
+<input type="button" name="b2" value="cancel">
+
+<img src="C:\WINNT\Web\Wallpaper\Gold Petals.jpg" width=150 heigth=150> </img>
+
+</form>
+</body>
+</html>
